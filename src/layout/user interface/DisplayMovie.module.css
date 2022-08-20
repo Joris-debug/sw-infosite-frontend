@@ -43,3 +43,31 @@
     background-color: #070606;
 }
 
+.buttonContainer{    
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer button{
+    font-family: 'star_jediregular';
+    letter-spacing: 0.2rem;
+    transition: background 0.1s;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #1f1f1f;
+    padding: 1rem;
+    background-color: #fce441;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border: none;
+}
+
+.buttonContainer button:hover,
+.buttonContainer button:active,
+.buttonContainer button.active {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #ffdc00;
+    cursor: pointer;
+}

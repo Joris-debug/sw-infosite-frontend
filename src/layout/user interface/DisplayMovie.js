@@ -1,7 +1,7 @@
 import classes from "./DisplayMovie.module.css";
 import DisplayCard from "./DisplayCard";
 import {Link} from "react-router-dom";
-import addToFavorites from "./addToFavorites";
+import {addToFavorites} from "./addToFavorites";
 
 function DisplayMovie(props) {
     return (

@@ -5,7 +5,8 @@
     border-radius: 2rem;                     
     padding-bottom: 2rem;                    
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    margin-top: 2rem;                        
+    margin-top: 2rem;
+    min-width: 330px;                         
 }                                            
                                              
 .listBody ul {                               
@@ -14,7 +15,7 @@
     list-style: none;                        
     flex-direction: row;                     
     justify-content: space-between;          
-    flex-wrap: wrap;                         
+    flex-wrap: wrap;            
 }
 
 .listBody .collection {

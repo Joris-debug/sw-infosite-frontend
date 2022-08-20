@@ -1,7 +1,8 @@
 import classes from "./DisplayCharacter.module.css";
 import DisplayCard from "./DisplayCard";
 import {Link} from "react-router-dom";
-import addToFavorites from "./addToFavorites";
+import {addToFavorites} from "./addToFavorites";
+
 function DisplayCharacter(props) {
     return (
         <div className={classes.description}>

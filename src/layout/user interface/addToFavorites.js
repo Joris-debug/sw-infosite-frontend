@@ -1,6 +1,5 @@
 
 function addToFavorites(){
-    //window.localStorage.removeItem('swFavorites');
     let object = window.localStorage.getItem('swFavorites');
     if(!isJsonString(object) || JSON.parse(object) === null){
         object={
@@ -14,6 +13,7 @@ function addToFavorites(){
     else
     object = JSON.parse(object)
     
+    console.log(object)
     if(arguments[0].character)
     {
        if(!object.characterArray.includes({id: arguments[0].character.id}))
@@ -29,9 +29,15 @@ function addToFavorites(){
        if(!object.planetArray.includes({id: arguments[0].vehicle.id, isShip: arguments[0].isShip}))
         object.planetArray.push({id: arguments[0].vehicle.id, isShip: arguments[0].isShip})
     }
+    else if(arguments[0].movie)
+    {
+       if(!object.planetArray.includes({id: arguments[0].movie.episode_id}))
+        object.movieArray.push({id: arguments[0].movie.episode_id})
+    }
+    
     window.localStorage.setItem('swFavorites', JSON.stringify(object));
 
-    
+   
 
 }
 
@@ -44,5 +50,23 @@ function isJsonString(str) {
     return true;
 }
 
+function getFavoritesObject(){
 
-export default addToFavorites;
+    let object = window.localStorage.getItem('swFavorites');
+    if(!isJsonString(object) || JSON.parse(object) === null){
+        object={
+            movieArray: [],
+            vehicleArray: [],
+            characterArray: [],
+            planetArray: [],
+        }
+        window.localStorage.setItem('swFavorites', JSON.stringify(object));
+    }
+    else
+    object = JSON.parse(object)
+
+    return object;
+}
+
+
+export {addToFavorites, getFavoritesObject};
