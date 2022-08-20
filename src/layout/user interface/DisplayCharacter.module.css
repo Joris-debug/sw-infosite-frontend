@@ -1,0 +1,82 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 3.5%;
+}
+
+.description img {
+    width: auto;
+    height: 10rem;
+}
+.descriptionHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.description p{
+    font-size: 1.25rem;
+}
+
+.description a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.elementList ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.elementList li{
+    margin: 0.75rem;
+    color: #f8e35c;
+}
+.elementList a{
+    text-decoration: none;
+    color: #f8e35c;
+    background: #4d4a4a;
+    border-radius: 2rem;
+    padding: 0.5rem;
+
+}
+.elementList a:hover{
+    color: white;
+    background-color: #070606;
+}
+
+.buttonContainer{    
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer button{
+    font-family: 'star_jediregular';
+    letter-spacing: 0.2rem;
+    transition: background 0.1s;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    padding: 1rem;
+    background: #fff12b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border: none;
+}
+
+.buttonContainer button:hover,
+.buttonContainer button:active,
+.buttonContainer button.active {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: #ffee00;
+    cursor: pointer;
+}
+

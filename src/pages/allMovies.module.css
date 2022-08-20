@@ -1,0 +1,46 @@
+.listBody {                                  
+    width: 45%;                              
+    background: #413f3f;                     
+    margin: auto;                            
+    border-radius: 2rem;                     
+    padding-bottom: 2rem;                    
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;                        
+}                                            
+                                             
+.listBody ul {                               
+    padding-right: 40px;                     
+    display: flex;                           
+    list-style: none;                        
+    flex-direction: row;                     
+    justify-content: space-between;          
+    flex-wrap: wrap;                         
+}
+
+.listBody .collection {
+    display: flex;
+    flex-direction: column;
+}
+
+.listBody .collection a:hover {
+    transform: scale(1.1);
+    background: #646060;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.listBody .collection a {
+    transition: transform .2s;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.listBody p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.listBody img {
+    height: 20rem;
+    width: auto;
+}

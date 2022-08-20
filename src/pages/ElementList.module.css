@@ -1,0 +1,36 @@
+.buttonContainer {
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+}
+.buttonContainer button{
+    font-family: 'star_jediregular';
+    letter-spacing: 0.2rem;
+    transition: background 0.1s;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f8e35c;
+    width: 20%;
+    padding: 1rem;
+    background: #4d4a4a;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border: none;
+}
+
+.buttonContainer button:hover,
+.buttonContainer button:active,
+.buttonContainer button.active {
+    color: white;
+    background: #070606;
+    cursor: pointer;
+}
+.List h1{
+    text-align: center;
+    margin-bottom: 0;
+}

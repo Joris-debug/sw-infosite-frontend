@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'star_jediregular';
+    src: url('./layout/Starjedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #afafaf;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    font-family: 'star_jediregular';
+    margin: 0;
+}

@@ -1,0 +1,20 @@
+.radioForm fieldset{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.radioForm{    
+    margin-top: 2rem;
+}
+.radioForm p{
+    text-align: center;
+}
+.radioForm .bundle{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: 2em auto;
+    gap: 0.5em;
+}
