@@ -13,14 +13,11 @@ function BookmarksPage() {
         setIsLoading(true)
         let FavoritesObject = getFavoritesObject();
 
-        FavoritesObject.movieArray.map(item =>
-        fetch(`http://localhost:3001/${itemSwitch}/${item.id}`
-        ).then(response => {
-            return response.json();
-        }).then(data => {
-            setLoadedItems(loadedItems.concat(data))
-        }))
-            setIsLoading(false)
+        FavoritesObject.movieArray.map(async item => {
+        let data = await fetch(`http://localhost:3001/${itemSwitch}/${item.id}`)
+        setLoadedItems(setLoadedItems.push(data))
+        })
+        setIsLoading(false)
             
     }, [itemSwitch])
 
