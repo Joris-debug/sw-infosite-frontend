@@ -34,6 +34,8 @@ function AllShipsPage() {
         setVehicleShipSwitch(event.target.value);
     }
 
+    
+
     return (
         <div className={classes.List}>
             <h1>Page: {pageCount}</h1>
