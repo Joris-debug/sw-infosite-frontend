@@ -9,7 +9,7 @@ function DisplayPlanet(props) {
             <DisplayCard>
                 <div className={classes.descriptionHeader}>
                     <h1>name: {props.planet.name}</h1>
-                    <img src={"/planet.png"} alt="Type: Planet"></img>
+                    <img src={process.env.PUBLIC_URL + "/planet.png"} alt="Type: Planet"></img>
                 </div>
                 <p>rotation period: {props.planet.rotation_period} hours</p>
                 <p>orbital period: {props.planet.orbital_period} days</p>

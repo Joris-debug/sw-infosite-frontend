@@ -5,7 +5,7 @@ function Navigation() {
     return (
         <div className={classes.header}>
             <div className={classes.logoDiv}>
-                <img className={classes.logo} src="/icons8-chewbacca-120.png" alt={"logo"}></img>
+                <img className={classes.logo} src={process.env.PUBLIC_URL + "/icons8-chewbacca-120.png"} alt={"logo"}></img>
                 <div className={classes.title}>
                     Star Wars infosite
                 </div>

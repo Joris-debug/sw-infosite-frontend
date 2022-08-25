@@ -15,7 +15,7 @@ function DisplayMovie(props) {
             <DisplayCard>
                 <div className={classes.descriptionHeader}>
                     <h1>Star Wars: {props.movie.title}</h1>
-                    <img src={"/movie-camera.png"} alt="Type: Movie"></img>
+                    <img src={process.env.PUBLIC_URL + "/movie-camera.png"} alt="Type: Movie"></img>
                 </div>
                 <p>opening crawl:<br/>{props.movie.opening_crawl}</p>
                 <p>release date: {props.movie.release_date}</p>

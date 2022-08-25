@@ -9,7 +9,7 @@ function DisplayCharacter(props) {
             <DisplayCard>
                 <div className={classes.descriptionHeader}>
                     <h1>name: {props.character.name}</h1>
-                    <img src={"/character.png"} alt="Type: Character"></img>
+                    <img src={process.env.PUBLIC_URL + "/character.png"} alt="Type: Character"></img>
                 </div>
                 <p>gender: {props.character.gender}</p>
                 <p>height: {props.character.height} cm</p>

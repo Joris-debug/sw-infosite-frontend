@@ -9,7 +9,7 @@ function DisplayVehicle(props) {
             <DisplayCard>
                 <div className={classes.descriptionHeader}>
                     <h1>name: {props.vehicle.name}</h1>
-                    <img src={"/starship.png"} alt="Type: Vehicle"></img>
+                    <img src={process.env.PUBLIC_URL + "/starship.png"} alt="Type: Vehicle"></img>
                 </div>
                 <p>model: {props.vehicle.model}</p>
                 <p>manufacturer: {props.vehicle.manufacturer}</p>
