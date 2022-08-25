@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/sw-infosite-frontend/static/css/main.377dacff.css",
+    "main.js": "/sw-infosite-frontend/static/js/main.0235911f.js",
+    "static/media/Starjedi.ttf": "/sw-infosite-frontend/static/media/Starjedi.8d577dc1e1755c4860f3.ttf",
+    "index.html": "/sw-infosite-frontend/index.html",
+    "main.377dacff.css.map": "/sw-infosite-frontend/static/css/main.377dacff.css.map",
+    "main.0235911f.js.map": "/sw-infosite-frontend/static/js/main.0235911f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.377dacff.css",
+    "static/js/main.0235911f.js"
+  ]
+}
