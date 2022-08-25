@@ -4,6 +4,7 @@ import { getFavoritesObject } from "../layout/user interface/addToFavorites";
 import DisplayMovie from "../layout/user interface/DisplayMovie";
 import DisplayCharacter from "../layout/user interface/DisplayCharacter";
 import DisplayVehicle from "../layout/user interface/DisplayVehicle";
+import DisplayPlanet from "../layout/user interface/DisplayPlanet";
 function BookmarksPage() {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -35,12 +36,18 @@ function BookmarksPage() {
                     break;
                     case "transport":
                         await Promise.all (FavoritesObject.vehicleArray.map(async item => {
-                            console.log(`http://localhost:3001/${itemSwitch}/${item.isShip ? "ship" : "vehicle"}/${item.id}`)
                             let data = await fetch(`http://localhost:3001/${itemSwitch}/${item.isShip ? "ship" : "vehicle"}/${item.id}`)
                             data = await data.json(); 
                             arrayForObjects.push(data)
                             }))
                         break;
+                        case "planet":
+                            await Promise.all (FavoritesObject.planetArray.map(async item => {
+                                let data = await fetch(`http://localhost:3001/${itemSwitch}/${item.id}`)
+                                data = await data.json(); 
+                                arrayForObjects.push(data)
+                                }))
+                            break;
                 default:
                     break;
             }
@@ -103,6 +110,8 @@ function BookmarksPage() {
                         return(<DisplayCharacter character={item}/>)
                     case "transport":
                         return(<DisplayVehicle vehicle={item}/>)
+                    case "planet":
+                        return(<DisplayPlanet planet={item}/>)
                     default:
                         break;
                 }

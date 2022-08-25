@@ -1,9 +1,14 @@
+import React from "react";
 import classes from "./DisplayMovie.module.css";
 import DisplayCard from "./DisplayCard";
 import {Link} from "react-router-dom";
-import {addToFavorites} from "./addToFavorites";
+import {addToFavorites, isAlreadyFavorite, removeFromFavorites} from "./addToFavorites";
 
 function DisplayMovie(props) {
+
+    const [, updateState] = React.useState();
+    const forceUpdate = React.useCallback(() => updateState({}), []);
+
     return (
         <div className={classes.description}>
             <h2>episode: {props.movie.episode_id}</h2>
@@ -35,7 +40,10 @@ function DisplayMovie(props) {
                     )}</ul>
                 </div>
                 <div className={classes.buttonContainer}>
-                    <button onClick={() => addToFavorites(props)}>Add to Favorites</button>
+                    <button onClick={() => 
+                    {isAlreadyFavorite(props.movie, "movie") ?  removeFromFavorites(props.movie, "movie") : addToFavorites(props)
+                    forceUpdate()
+                    }}>{isAlreadyFavorite(props.movie, "movie") ? "Remove Bookmark" : "Add Bookmark"}</button>
                 </div>
             </DisplayCard>
         </div>

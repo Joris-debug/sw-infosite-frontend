@@ -1,7 +1,7 @@
 
+
 function addToFavorites(){
     let object = getFavoritesObject();
-    
     console.log(object)
     if(arguments[0].character)
     {
@@ -23,7 +23,7 @@ function addToFavorites(){
        if(!isAlreadyFavorite({id: arguments[0].movie.id}, "movie"))
         object.movieArray.push({id: arguments[0].movie.id})
     }
-    
+
     window.localStorage.setItem('swFavorites', JSON.stringify(object));
 
    
@@ -38,16 +38,17 @@ function isAlreadyFavorite(item, type){
         case "movie":
             return object.movieArray.some(data => data.id === item.id)
 
-            case "character":
-                return object.characterArray.some(data => data.id === item.id)
+        case "character":
+            return object.characterArray.some(data => data.id === item.id)
 
-            case "planet":
-                return object.planetArray.some(data => data.id === item.id)
+        case "planet":
+            return object.planetArray.some(data => data.id === item.id)
             
-            case "vehicle":
-                return object.vehicleArray.some(data => data.id === item.id && data.isShip === item.isShip)
+        case "vehicle":
+            return object.vehicleArray.some(data => data.id === item.id && data.isShip === item.isShip)
 
         default:
+            console.log("error, bookmark has no type")
             return true;
     }
 
@@ -80,5 +81,33 @@ function getFavoritesObject(){
     return object;
 }
 
+function removeFromFavorites(item, type){
+    if(!isAlreadyFavorite(item, type))
+        return;
+    
+    let object = getFavoritesObject();
 
-export {addToFavorites, getFavoritesObject};
+    switch(type)
+    {
+        case "movie":
+            object.movieArray.splice(object.movieArray.find(data => data.id === item.id), 1);
+            break;
+
+        case "character":
+            return object.characterArray.find(data => data.id === item.id)
+
+        case "planet":
+            return object.planetArray.find(data => data.id === item.id)
+            
+        case "vehicle":
+            return object.vehicleArray.find(data => data.id === item.id && data.isShip === item.isShip)
+
+        default:
+            console.log("error, bookmark has no type")
+    }
+    
+    window.localStorage.setItem('swFavorites', JSON.stringify(object));
+    
+}
+
+export {addToFavorites, getFavoritesObject, isAlreadyFavorite, removeFromFavorites};
